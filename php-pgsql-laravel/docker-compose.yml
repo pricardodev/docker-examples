@@ -1,0 +1,16 @@
+version: '3.5'
+services:
+  api:
+    build: .
+    container_name: siais_api
+    ports:
+      - 8000:80
+    volumes:
+      - ./siais_api:/var/www/html
+    networks: 
+      - back-end
+    restart: on-failure
+    
+networks:
+    back-end:
+      driver: bridge
