@@ -7,6 +7,7 @@ services:
       - 8000:80
     volumes:
       - ./siais_api:/var/www/html
+      - /etc/localtime:/etc/localtime:ro
     networks: 
       - back-end
     restart: on-failure
